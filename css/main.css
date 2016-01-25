@@ -1,809 +1,123 @@
-  section {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-  section.velocity-animating {
-    -webkit-transition: none;
-            transition: none; }
-
-section.workPage {
-  left: 0px; }
-  section.workPage.noScroll {
-    overflow: hidden;
-    pointer-events: none; }
-  section.workPage .introText {
-    position: fixed;
-    top: 0px;
-    left: 0px;
+html
+{
     width: 100%;
-    height: 65%;
-    margin-top: 96px; }
-    section.workPage .introText .introTextContainer {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      max-width: 800px;
-      display: table; }
-    section.workPage .introText p {
-      letter-spacing: 0.1px;
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      white-space: nowrap;
-      font-family: 'TisaOT-Ita', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
-      font-weight: 200;
-      font-style: italic;
-      font-size: 26px;
-      line-height: 1.5;
-      text-rendering: geometricPrecision; }
-      section.workPage .introText p > span {
-        position: relative;
-        white-space: nowrap;
-        cursor: pointer;
-        color: #f05355; }
-        section.workPage .introText p > span.animated {
-          cursor: default; }
-        section.workPage .introText p > span span {
-          display: inline-block;
-          padding: 0px 0px 0px 3px;
-          margin: 0px 0px 0px -3px; }
-        section.workPage .introText p > span .descender {
-          margin-left: -2px; }
-        section.workPage .introText p > span span:not(.descender) {
-          background-image: -webkit-linear-gradient(#FAFAFA, #FAFAFA), -webkit-linear-gradient(#FAFAFA, #FAFAFA), -webkit-linear-gradient(#f05355, #f05355);
-          background-image: linear-gradient(#FAFAFA, #FAFAFA), linear-gradient(#FAFAFA, #FAFAFA), linear-gradient(#f05355, #f05355);
-          background-size: 0.10em 0.01em, 0.10em 0.07em, 0.07em 0.07em;
-          background-size: 0.10rem 0.01rem, 0.10rem 0.07rem, 0.07rem 0.07rem;
-          background-repeat: no-repeat, no-repeat, repeat-x;
-          background-position: 0% 80%, 100% 80%, 0% 82%; }
-        section.workPage .introText p > span span.noBackground {
-          background: transparent; }
-        section.workPage .introText p > span span.l {
-          padding-right: 5px;
-          margin-right: -5px; }
-      section.workPage .introText p br.small {
-        display: none; }
-    @media screen and (max-width: 1050px) {
-      section.workPage .introText p {
-        font-size: 24px; } }
-    @media screen and (max-width: 832px) {
-      section.workPage .introText p {
-        font-size: 20px; } }
-    @media screen and (max-width: 600px) {
-      section.workPage .introText p {
-        font-size: 18px; }
-        section.workPage .introText p br.large {
-          display: none; }
-        section.workPage .introText p br.small {
-          display: block; } }
-    @media screen and (max-width: 480px) {
-      section.workPage .introText p {
-        font-size: 16px; } }
+    height:100%;
+}
 
-  section.workPage .workContainer {
+body
+{
+    width:100%;
+    height:100%;
+}
+
+section
+{
+    width:100%;
+}
+
+section.image-section
+{
+    width:100%;   
+    position:absolute;
+    top:85%;
+    padding-bottom:250px;
+}
+
+.image-container
+{
+    width:100%;
+    max-width: 1050px;
+    height:1750px; /*TO DO: Flexible Height*/
+    background-color: gray;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-section .image-container .thumbnail
+{
     position: absolute;
-    top: 65%;
-    width: 100%;
-    margin-top: 128px; }
-    section.workPage .workContainer .workThumbnailContainer {
-      width: 100%;
-      padding-bottom: 166.666666666%; }
-    section.workPage .workContainer .workThumbnail {
-      position: absolute;
-      overflow: hidden;
-      z-index: 1;
-      -webkit-transform-origin: left top;
+    -webkit-transform-origin: left top;
           -ms-transform-origin: left top;
               transform-origin: left top;
-      pointer-events: all; }
-      section.workPage .workContainer .workThumbnail.cursor {
-        cursor: url(../img/close.png), auto; }
-      section.workPage .workContainer .workThumbnail > a {
-        width: 100%;
-        height: 100%;
-        position: absolute; }
-      section.workPage .workContainer .workThumbnail.small {
-        width: 33.333333333%;
-        padding-bottom: 33.333333333%; }
-      section.workPage .workContainer .workThumbnail.medium {
-        width: 66.666666666%;
-        padding-bottom: 33.333333333%; }
-      section.workPage .workContainer .workThumbnail.large {
-        width: 66.666666666%;
-        padding-bottom: 66.666666666%; }
-      section.workPage .workContainer .workThumbnail.columnOne {
-        left: 0px; }
-      section.workPage .workContainer .workThumbnail.columnTwo {
-        left: 33.333333333%; }
-      section.workPage .workContainer .workThumbnail.columnThree {
-        left: 66.666666666%; }
-      section.workPage .workContainer .workThumbnail.rowOne {
-        top: 0px; }
-      section.workPage .workContainer .workThumbnail.rowTwo {
-        top: 20%; }
-      section.workPage .workContainer .workThumbnail.rowThree {
-        top: 40%; }
-      section.workPage .workContainer .workThumbnail.rowFour {
-        top: 60%; }
-      section.workPage .workContainer .workThumbnail.rowFive {
-        top: 80%; }
-      section.workPage .workContainer .workThumbnail .bottomInfo {
-        height: 72px;
-        width: 100%;
-        background: #34495e;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        -webkit-transform: translateY(72px);
-            -ms-transform: translateY(72px);
-                transform: translateY(72px);
-        -webkit-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        section.workPage .workContainer .workThumbnail .bottomInfo button, section.workPage .workContainer .workThumbnail .bottomInfo .button {
-          cursor: pointer;
-          margin: 12px;
-          position: absolute;
-          right: 0px;
-          top: 0px;
-          width: 48px;
-          line-height: 44px;
-          padding: 0px;
-          border-radius: 50%;
-          font-size: 12px;
-          overflow: visible; }
-          section.workPage .workContainer .workThumbnail .bottomInfo button svg, section.workPage .workContainer .workThumbnail .bottomInfo .button svg {
-            pointer-events: none;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            height: 48px;
-            width: 48px;
-            margin: -2px; }
-          section.workPage .workContainer .workThumbnail .bottomInfo button:after, section.workPage .workContainer .workThumbnail .bottomInfo .button:after {
-            left: -2px;
-            right: -2px;
-            top: -2px;
-            bottom: -2px;
-            cursor: pointer; }
-          section.workPage .workContainer .workThumbnail .bottomInfo button:hover:after, section.workPage .workContainer .workThumbnail .bottomInfo .button:hover:after {
-            width: 48px;
-            height: 48px; }
-          section.workPage .workContainer .workThumbnail .bottomInfo button:hover svg, section.workPage .workContainer .workThumbnail .bottomInfo .button:hover svg {
-            opacity: 1;
-            -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                    transform: scale(1); }
-          section.workPage .workContainer .workThumbnail .bottomInfo button svg, section.workPage .workContainer .workThumbnail .bottomInfo .button svg {
-            cursor: pointer;
-            opacity: 0;
-            -webkit-transform: scale(0.3);
-                -ms-transform: scale(0.3);
-                    transform: scale(0.3);
-            -webkit-transition: 0.45s cubic-bezier(0.175, 0.885, 0.32, 1);
-                    transition: 0.45s cubic-bezier(0.175, 0.885, 0.32, 1);
-            -webkit-transition: 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.5);
-                    transition: 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.5);
-            height: 48px;
-            width: 48px;
-            z-index: 3; }
-        section.workPage .workContainer .workThumbnail .bottomInfo .category {
-          font-size: 9px;
-          line-height: 12px;
-          margin: 18px 0px 0px 16px;
-          color: #ffffff;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-family: 'Brandon-medium', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif; }
-          section.workPage .workContainer .workThumbnail .bottomInfo .category span.divider {
-            color: #f05355; }
-        section.workPage .workContainer .workThumbnail .bottomInfo .description {
-          color: #ffffff;
-          font-size: 16px;
-          line-height: 32px;
-          float: left;
-          margin: 0px 12px 12px 16px;
-          font-family: 'TisaOT-Medi', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif; }
-        section.workPage .workContainer .workThumbnail .bottomInfo .showSmallText {
-          display: none; }
-        @media screen and (max-width: 1050px) {
-          section.workPage .workContainer .workThumbnail .bottomInfo .description {
-            font-size: 14px; }
-          section.workPage .workContainer .workThumbnail .bottomInfo .hideSmallText {
-            display: none; }
-          section.workPage .workContainer .workThumbnail .bottomInfo .showSmallText {
-            display: inline; } }
-      section.workPage .workContainer .workThumbnail .thumbnailImageContainer {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        overflow: hidden; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.madeThumbnail {
-          background-image: url("images/camera.jpg");
-          background-size: cover;
-          background-position: left center;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-           }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.madeThumbnail .madeText {
-            background: url("../img/madeThumbnail/madeText.svg") no-repeat center;
-            background-size: 100% auto;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            -webkit-transform-origin: bottom center;
-                -ms-transform-origin: bottom center;
-                    transform-origin: bottom center; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.madeThumbnail .madeLogoContainer {
-            position: absolute;
-            width: 20%;
-            height: 0px;
-            padding-bottom: 30%;
-            margin: auto;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            overflow: hidden;
-            -webkit-transform-origin: bottom center;
-                -ms-transform-origin: bottom center;
-                    transform-origin: bottom center; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.madeThumbnail .madeLogo {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 500%;
-            background: url("../img/madeThumbnail/madeLogo.png") no-repeat center;
-            background-size: contain;
-            -webkit-transition: 0.6s cubic-bezier(0.5, 0, 0.35, 1);
-                    transition: 0.6s cubic-bezier(0.5, 0, 0.35, 1);
-            -webkit-transition: 0.6s cubic-bezier(0.5, -0.2, 0.35, 1);
-                    transition: 0.6s cubic-bezier(0.5, -0.2, 0.35, 1);
-            -webkit-transform: translateY(0%);
-                -ms-transform: translateY(0%);
-                    transform: translateY(0%); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail {
-          background-image:url("images/bridge.jpg");
-          background-size: cover;
-          background-position: left center;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .expoText {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            background: url("../img/expoThumbnail/expoText.svg") no-repeat center;
-            background-size: contain;
-            -webkit-transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                    transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .burj, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .cntower, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .financialcenter, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .eiffel, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .tajmahal, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .seattle, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .colloseum, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .opera {
-            height: 58%;
-            position: absolute;
-            bottom: 0px;
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .burj {
-            left: -10%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .cntower {
-            left: 8%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .financialcenter {
-            left: 12%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .eiffel {
-            left: 35%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .tajmahal {
-            left: 56%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .seattle {
-            left: 50%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .colloseum {
-            left: 62%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.expoThumbnail .opera {
-            left: 84%; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail {
-          background-image: url("images/tomatoe.jpg");
-          background-size: cover;
-          background-position: left center;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .greenCircle, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .redCircle, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .blueCircle {
-            width: 150%;
-            height: 0px;
-            padding-bottom: 150%;
-            position: absolute;
-            top: -25%;
-            left: -25%;
-            right: -25%;
-            bottom: -25%;
-            margin: auto;
-            -webkit-transform: translateX(0) translateY(0);
-                -ms-transform: translateX(0) translateY(0);
-                    transform: translateX(0) translateY(0);
-            border-radius: 50%;
-            -webkit-transform-origin: bottom center;
-                -ms-transform-origin: bottom center;
-                    transform-origin: bottom center; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .greenCircle {
-            background: #42BAB4;
-            -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .redCircle {
-            background: #F45358;
-            -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
-                    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail .blueCircle {
-            background: #2F474F;
-            -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-                    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail svg {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            -webkit-transform: scale(1) translateY(0);
-                -ms-transform: scale(1) translateY(0);
-                    transform: scale(1) translateY(0);
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-            section.workPage .workContainer .workThumbnail .thumbnailImageContainer.sentiThumbnail svg path {
-              -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                      transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-              fill: #ffffff; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.ideoThumbnail {
-          background: url("../img/ideoThumbnail/ideoBackground.jpg") no-repeat;
-          background-size: cover;
-          background-position: left center;
-          -webkit-transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-                  transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.ideoThumbnail .ideoFront {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            background: url("../img/ideoThumbnail/ideoFront.png") no-repeat left center;
-            background-size: 100% auto;
-            width: 200%;
-            height: 100%;
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail {
-          background-image: url("images/paper.jpg");
-          background-size: cover;
-          background-position: left center;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail + .bottomInfo {
-            -webkit-transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-                    transition: 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail .newyorkText {
-            background: url("../img/newyorkThumbnail/newyorkText.png") no-repeat center;
-            background-size: cover;
-            left: 0px;
-            top: 0px;
-            -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-                    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-            -webkit-transform: translateY(0px);
-                -ms-transform: translateY(0px);
-                    transform: translateY(0px);
-            position: absolute;
-            height: 100%;
-            width: 100%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail .newyorkSkyscrapers, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail .newyorkBuildings {
-            position: absolute;
-            -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-                    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-            height: 100%;
-            width: 100%;
-            left: 0px; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail .newyorkSkyscrapers {
-            background: url("../img/newyorkThumbnail/newyorkSkyscrapers.png") no-repeat bottom center;
-            background-size: 100% auto;
-            -webkit-transform: translateY(40%);
-                -ms-transform: translateY(40%);
-                    transform: translateY(40%); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.newyorkThumbnail .newyorkBuildings {
-            background: url("../img/newyorkThumbnail/newyorkBuildings.png") no-repeat bottom center;
-            background-size: 100% auto;
-            -webkit-transform: translateY(50%);
-                -ms-transform: translateY(50%);
-                    transform: translateY(50%); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail {
-          background: #77ACC9; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djBackground, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djText {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djBackground {
-            background: url("../img/djThumbnail/djBackground.png") no-repeat center;
-            background-size: contain;
-            -webkit-transform: scale(0.6);
-                -ms-transform: scale(0.6);
-                    transform: scale(0.6); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djText {
-            background: url("../img/djThumbnail/djText.svg") no-repeat center;
-            background-size: contain;
-            -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                    transform: scale(1);
-            -webkit-filter: blur(0px);
-                    filter: blur(0px); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail {
-          background: #f9f9f9;
-          background-size: cover;
-          -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexBottom, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexTop, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexText {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0px;
-            margin: auto;
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexBottom {
-            bottom: 0px;
-            -webkit-transform: translateY(20%);
-                -ms-transform: translateY(20%);
-                    transform: translateY(20%);
-            background: url("../img/hexThumbnail/hexBottom.png") no-repeat bottom center;
-            background-size: cover; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexTop {
-            bottom: 0px;
-            -webkit-transform: translateY(-20%);
-                -ms-transform: translateY(-20%);
-                    transform: translateY(-20%);
-            background: url("../img/hexThumbnail/hexTop.png") no-repeat bottom center;
-            background-size: cover; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hexThumbnail .hexText {
-            top: 0px;
-            background: url("../img/hexThumbnail/hexText.png") no-repeat center;
-            background-size: contain;
-            -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                    transform: scale(1); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.menoThumbnail {
-          background: #1C2833;
-          -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-                  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.menoThumbnail .menoLogo, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.menoThumbnail .menoText {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.menoThumbnail .menoLogo polyline {
-            stroke-dasharray: 2855;
-            stroke-dashoffset: 2855;
-            -webkit-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.menoThumbnail .menoText {
-            -webkit-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-                    transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-            background: url("../img/menoThumbnail/menoText.svg") no-repeat center;
-            background-size: contain; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.stagThumbnail {
-          background: url("../img/stagThumbnail/stagBackground.jpg") no-repeat center;
-          background-size: cover; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.stagThumbnail .stagLogofront, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.stagThumbnail .stagLogoback {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.stagThumbnail .stagLogoback {
-            background: url("../img/stagThumbnail/stagLogoback.png") no-repeat center;
-            background-size: contain;
-            ransform: rotate(0deg);
-            -webkit-transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
-                    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
-            -webkit-transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.stagThumbnail .stagLogofront {
-            background: url("../img/stagThumbnail/stagLogofront.png") no-repeat center;
-            background-size: contain; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail {
-          background-image: url("images/city.jpg");
-          background-size: cover;
-          background-position: left center;
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .hopsLogoBox {
-            position: absolute;
-            left: -20%;
-            right: -20%;
-            height: 100%;
-            width: 140%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .h, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o2, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o3, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .p, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .s {
-            margin: 0 auto;
-            display: block;
-            left: 0px;
-            right: 0px;
-            position: absolute;
-            top: 30%;
-            height: 40%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .h {
-            -webkit-transform: translateX(38%);
-                -ms-transform: translateX(38%);
-                    transform: translateX(38%);
-            -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o2, section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o3 {
-            -webkit-transform-origin: 38% 50%;
-                -ms-transform-origin: 38% 50%;
-                    transform-origin: 38% 50%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o {
-            -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                    transform: scale(0);
-            -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o2 {
-            -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                    transform: scale(0);
-            -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .o3 {
-            -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                    transform: scale(0);
-            -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .p {
-            -webkit-transform: translateY(100%);
-                -ms-transform: translateY(100%);
-                    transform: translateY(100%);
-            -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            -webkit-transform-origin: 62% 0%;
-                -ms-transform-origin: 62% 0%;
-                    transform-origin: 62% 0%; }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .s {
-            -webkit-transform: translateX(50%) matrix(1, 0.08, 0.25, 1, 0, 0);
-                -ms-transform: translateX(50%) matrix(1, 0.08, 0.25, 1, 0, 0);
-                    transform: translateX(50%) matrix(1, 0.08, 0.25, 1, 0, 0);
-            -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-          section.workPage .workContainer .workThumbnail .thumbnailImageContainer.hopsThumbnail .pMask {
-            background: #231f20;
-            position: absolute;
-            width: 100%;
-            height: 30%;
-            top: 70%;
-            left: 0px; }
-      @media screen and (max-width: 600px) {
-        section.workPage .workContainer .workThumbnail:nth-of-type(odd), section.workPage .workContainer .workThumbnail:nth-of-type(even) {
-          top: auto;
-          left: auto;
-          right: auto;
-          bottom: auto; }
-        section.workPage .workContainer .workThumbnail.small, section.workPage .workContainer .workThumbnail.medium, section.workPage .workContainer .workThumbnail.large {
-          position: absolute;
-          left: 0px;
-          width: 100%;
-          padding-bottom: 100%;
-          -webkit-transform-origin: center center;
-              -ms-transform-origin: center center;
-                  transform-origin: center center; }
-          section.workPage .workContainer .workThumbnail.small.expandedWork, section.workPage .workContainer .workThumbnail.medium.expandedWork, section.workPage .workContainer .workThumbnail.large.expandedWork {
-            padding-bottom: 0px;
-            z-index: 9; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(1) {
-          top: 100vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(2) {
-          top: 200vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(3) {
-          top: 300vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(4) {
-          top: 0px; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(5) {
-          top: 600vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(6) {
-          top: 400vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(7) {
-          top: 500vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(8) {
-          top: 800vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(9) {
-          top: 700vw; }
-        section.workPage .workContainer .workThumbnail:nth-of-type(10) {
-          top: 900vw; }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djBackground {
-          -webkit-transform: scale(0.8);
-              -ms-transform: scale(0.8);
-                  transform: scale(0.8); }
-        section.workPage .workContainer .workThumbnail .thumbnailImageContainer.djThumbnail .djText {
-          -webkit-transform: scale(1.2);
-              -ms-transform: scale(1.2);
-                  transform: scale(1.2); } }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.madeThumbnail .madeLogo, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.madeThumbnail .madeLogo {
-      -webkit-transform: translateY(-80%);
-          -ms-transform: translateY(-80%);
-              transform: translateY(-80%); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail {
-      -webkit-transform: translateY(-72px);
-          -ms-transform: translateY(-72px);
-              transform: translateY(-72px);
-      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    z-index: 1;
+    padding-bottom: 166.666666666%;
+}
 
-    /*custom hovering trials ****************************************/
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail {
-      -webkit-transform: translateY(-72px);
-          -ms-transform: translateY(-72px);
-              transform: translateY(-72px);
-      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.image-section .image-container .thumbnail > a 
+{
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
 
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.newyorkThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.newyorkThumbnail {
-      -webkit-transform: translateY(-72px);
-          -ms-transform: translateY(-72px);
-              transform: translateY(-72px);
-      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.image-section .image-container .thumbnail.small
+{
+    width: 33.333333333%;
+    padding-bottom: 33.333333333%; 
+}
 
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.madeThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.madeThumbnail {
-      -webkit-transform: translateY(-72px);
-          -ms-transform: translateY(-72px);
-              transform: translateY(-72px);
-      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.image-section .image-container .thumbnail.medium
+{
+    width: 66.666666666%;
+    padding-bottom: 33.333333333%; 
+}
 
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail {
-      -webkit-transform: translateY(-72px);
-          -ms-transform: translateY(-72px);
-              transform: translateY(-72px);
-      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.image-section .image-container .thumbnail.large
+{
+    width: 66.666666666%;
+    padding-bottom: 66.666666666%;
+}
 
-    /*****************************************************************/
+.image-section .image-container .thumbnail.columnOne
+{
+    left:0px;
+}
+.image-section .image-container .thumbnail.columnTwo
+{
+    left:33.333333333%; 
+}
+.image-section .image-container .thumbnail.columnThree
+{
+    left:66.666666666%;
+}
+
+.image-section .image-container .thumbnail.rowOne
+{
+    top:0;
+}
+.image-section .image-container .thumbnail.rowTwo
+{
+    top:20%;
+}
+.image-section .image-container .thumbnail.rowThree
+{
+    top:40%;
+}
+.image-section .image-container .thumbnail.rowFour
+{
+    top:60%;
+}
+.image-section .image-container .thumbnail.rowFive
+{
+    top:80%;
+}
 
 
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .expoText, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .expoText {
-        left: 16%; }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .burj, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .cntower, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .financialcenter, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .eiffel, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .tajmahal, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .seattle, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .colloseum, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.expoThumbnail .opera, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .burj, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .cntower, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .financialcenter, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .eiffel, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .tajmahal, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .seattle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .colloseum, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.expoThumbnail .opera {
-        left: 0px;
-        height: 80%;
-        -webkit-transform-origin: bottom center;
-            -ms-transform-origin: bottom center;
-                transform-origin: bottom center; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .greenCircle, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .redCircle, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .blueCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .greenCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .redCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .blueCircle {
-      width: 15%;
-      padding-bottom: 15%; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .greenCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .greenCircle {
-      background: #42BAB4;
-      -webkit-transform: translateX(25%) translateY(-75%);
-          -ms-transform: translateX(25%) translateY(-75%);
-              transform: translateX(25%) translateY(-75%);
-      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-              transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .redCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .redCircle {
-      background: #F45358;
-      -webkit-transform: translateX(-25%) translateY(-75%);
-          -ms-transform: translateX(-25%) translateY(-75%);
-              transform: translateX(-25%) translateY(-75%);
-      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-              transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail .blueCircle, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail .blueCircle {
-      background: #2F474F;
-      -webkit-transform: translateX(0) translateY(-125%);
-          -ms-transform: translateX(0) translateY(-125%);
-              transform: translateX(0) translateY(-125%);
-      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail svg, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail svg {
-      -webkit-transform: translateY(5%) scale(0.5);
-          -ms-transform: translateY(5%) scale(0.5);
-              transform: translateY(5%) scale(0.5); }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.sentiThumbnail svg path, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.sentiThumbnail svg path {
-        fill: #2F474F; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.ideoThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.ideoThumbnail {
-      background-position: right center; }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.ideoThumbnail .ideoFront, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.ideoThumbnail .ideoFront {
-        left: -100%; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.newyorkThumbnail .newyorkSkyscrapers, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.newyorkThumbnail .newyorkSkyscrapers {
-      -webkit-transform: translateY(-20%) translateZ(0px);
-              transform: translateY(-20%) translateZ(0px);
-      -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.newyorkThumbnail .newyorkText, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.newyorkThumbnail .newyorkText {
-      -webkit-transform: translateY(-70%) translateZ(0px);
-              transform: translateY(-70%) translateZ(0px);
-      -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.newyorkThumbnail .newyorkBuildings, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.newyorkThumbnail .newyorkBuildings {
-      -webkit-transform: translateY(-72px) translateZ(0px);
-              transform: translateY(-72px) translateZ(0px);
-      -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.djThumbnail .djBackground, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.djThumbnail .djBackground {
-      -webkit-transform: scale(1.01) translateY(-36px);
-          -ms-transform: scale(1.01) translateY(-36px);
-              transform: scale(1.01) translateY(-36px); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.djThumbnail .djText, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.djThumbnail .djText {
-      opacity: 0;
-      -webkit-transform: scale(1.8) translateY(-36px);
-          -ms-transform: scale(1.8) translateY(-36px);
-              transform: scale(1.8) translateY(-36px);
-      -webkit-filter: blur(8px);
-              filter: blur(8px); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hexThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hexThumbnail {
-      -webkit-transform: translateY(-36px);
-          -ms-transform: translateY(-36px);
-              transform: translateY(-36px); }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hexThumbnail .hexBottom, section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hexThumbnail .hexTop, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hexThumbnail .hexBottom, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hexThumbnail .hexTop {
-        -webkit-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-                transform: translateY(0px); }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hexThumbnail .hexText, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hexThumbnail .hexText {
-        -webkit-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-                transform: scale(0.6); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.menoThumbnail, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.menoThumbnail {
-      -webkit-transform: translateY(-32px);
-          -ms-transform: translateY(-32px);
-              transform: translateY(-32px); }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.menoThumbnail .menoLogo polyline, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.menoThumbnail .menoLogo polyline {
-        stroke-dashoffset: 0;
-        -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-                transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-      section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.menoThumbnail .menoText, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.menoThumbnail .menoText {
-        -webkit-transform: translateY(25%);
-            -ms-transform: translateY(25%);
-                transform: translateY(25%);
-        -webkit-transition: 0.325s cubic-bezier(0.4, 0, 0.2, 1);
-                transition: 0.325s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.stagThumbnail .stagLogoback, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.stagThumbnail .stagLogoback {
-      -webkit-transform: rotate(360deg);
-          -ms-transform: rotate(360deg);
-              transform: rotate(360deg); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .h, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .h {
-      -webkit-transform: translateX(0px);
-          -ms-transform: translateX(0px);
-              transform: translateX(0px);
-      -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .o, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .o {
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1);
-      -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .o2, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .o2 {
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1);
-      -webkit-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .o3, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .o3 {
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1);
-      -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-              transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .p, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .p {
-      -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
-              transform: translateY(0px);
-      -webkit-animation: pBounce 0.5s linear;
-              animation: pBounce 0.5s linear; }
-    section.workPage .workContainer.noGyro .workThumbnail:hover .thumbnailImageContainer.hopsThumbnail .s, section.workPage .workContainer.noGyro .workThumbnail.expandedWork .thumbnailImageContainer.hopsThumbnail .s {
-      -webkit-transform: translateX(0px) matrix(1, 0, 0, 1, 0, 0);
-          -ms-transform: translateX(0px) matrix(1, 0, 0, 1, 0, 0);
-              transform: translateX(0px) matrix(1, 0, 0, 1, 0, 0);
-      -webkit-transition: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
-              transition: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1);
-      -webkit-transition: 0.35s cubic-bezier(0.175, 1, 0.5, 1.275);
-              transition: 0.35s cubic-bezier(0.175, 1, 0.5, 1.275); }
+#city
+{
+    background-image: url("images/city.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+          
+}
+
+
+
+
+
+
+
+
+
