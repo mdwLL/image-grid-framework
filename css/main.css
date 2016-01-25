@@ -106,7 +106,7 @@ section.image-section
 .thumbnail a img
 {
     height:100%;
-    width:auto;
+    width:100%;
 }
 
 .thumbnail:hover
@@ -152,6 +152,12 @@ section.image-section
         -ms-transform-origin: center center;
         transform-origin: center center;
     }
+
+    .thumbnail a img
+    {
+        width:auto;
+        height:100%;
+    }        
 
 }
 
