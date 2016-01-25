@@ -19,8 +19,9 @@ section.image-section
 {
     width:100%;   
     position:absolute;
-    top:85%;
+    top:10%;
     padding-bottom:250px;
+    background-color: #FAFAFA;
 }
 
 .image-container
@@ -28,7 +29,7 @@ section.image-section
     width:100%;
     max-width: 1050px;
     height:1750px; /*TO DO: Flexible Height*/
-    background-color: #FAFAFA;
+    background-color: white;
     margin: 0 auto;
     position: relative;
 }
@@ -102,18 +103,10 @@ section.image-section
     top:80%;
 }
 
-.city
+.thumbnail a img
 {
-    background-image: url("images/city.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.camera
-{
-    background-image: url("images/bridge.jpg");
-    background-size: cover;
-    background-position: center;
+    height:100%;
+    width:auto;
 }
 
 .thumbnail:hover
@@ -125,8 +118,29 @@ section.image-section
 
     .image-section .image-container .thumbnail:nth-of-type(1)
     {
+        top:0px;
+    }
+    .image-section .image-container .thumbnail:nth-of-type(2)
+    {
         top:100vw;
     }
+    .image-section .image-container .thumbnail:nth-of-type(3)
+    {
+        top:200vw;
+    }
+    .image-section .image-container .thumbnail:nth-of-type(4)
+    {
+        top:200vw;
+    }
+    .image-section .image-container .thumbnail:nth-of-type(5)
+    {
+        top:200vw;
+    }
+    .image-section .image-container .thumbnail:nth-of-type(6)
+    {
+        top:200vw;
+    }
+    /*Add more of the same depending on how many images you may have*/
 
     .image-section .image-container .thumbnail.small, .image-section .image-container .thumbnail.medium, .image-section .image-container .thumbnail.large
     {
